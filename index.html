@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookMyShow Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">book<span>my</span>show</div>
+  <input type="text" placeholder="Search for Movies, Events...">
+  <button class="location">Kottayam</button>
+</header>
+
+<section class="movies">
+  <h2>Now Showing</h2>
+  <div class="movie-list" id="movieList"></div>
+</section>
+
+<!-- Booking Modal -->
+<div class="modal" id="bookingModal">
+  <div class="modal-content">
+    <span id="closeBtn">&times;</span>
+    <h2 id="movieTitle"></h2>
+
+    <div class="timings">
+      <button onclick="selectTime('10:00 AM')">10:00 AM</button>
+      <button onclick="selectTime('2:00 PM')">2:00 PM</button>
+      <button onclick="selectTime('6:00 PM')">6:00 PM</button>
+    </div>
+
+    <div id="seatContainer"></div>
+
+    <div class="summary">
+      <p>Seats: <span id="seatCount">0</span></p>
+      <p>Total: ₹<span id="total">0</span></p>
+      <button onclick="checkout()">Proceed to Pay</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
